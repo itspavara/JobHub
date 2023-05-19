@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: "poppins";
+}
+
+body{
+  margin: 0 auto;
+}
+.logo a{
+  text-decoration: none;
+  color: white;
+}
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #1491ea;
+ 
+}
+.nav{
+  display: flex;
+  
+}
+.nav  li{
+  padding: 20px;
+  text-decoration: none;
+  list-style: none;
+  
+}
+.nav a{
+  text-decoration: none;
+  color: white;
+}
+
+.btn{
+  padding: 10px;
+  margin: 5px;
+  border: 1px;
+  border-radius: 7px;
+  background-color:#64c8fa;
+  color: white;
+}
+.foot-dis{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.foot-dis p{
+  text-align: center;
+}
+
+.foot-container{
+  display: flex;
+  justify-content: space-between;
+  background-color: #1491ea;
+}
+.foot-container div p{
+  width: 300px;
+}
+
+.foot-container div{
+  margin: 20px 30px;
+}
+
+.foot-nav li ,a{
+  text-decoration:none;
+  list-style: none;
+  margin: 5px;
+  color: white;
+  line-height: 2.5rem;
+}
+
+.fa-brands{
+  margin: 10px;
+}
+#logonav img{
+  width: 100px;
+  height: 100px;
+}
+
+#logofoot img{
+  width: 150px;
+  height:150px
+}
+
