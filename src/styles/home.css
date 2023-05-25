@@ -88,6 +88,91 @@ body{
 
 #logofoot img{
   width: 150px;
-  height:150px
+  height:160px
+}
+.search-wrapper{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 40vh;
+  border-bottom:  1px solid black;
+}
+.search{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 40%;
 }
 
+.search label{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.search input{
+  width: 60%;
+  height: 5vh;
+}
+
+.search div{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.search select{
+  height: 5vh;
+}
+
+.body{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+}
+.job-tag{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  width: 60%;
+  margin: 15px;
+}
+
+.grid-item{
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid-item button{
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid black;
+}
+
+.dis{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dis p{
+  width: 80%;
+  margin: 15px;
+}
+
+.dis button{
+  padding: 10px;
+  margin: 5px;
+  margin-bottom: 50px;
+  border: 1px solid black;
+}
