@@ -1,0 +1,69 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: "poppins";
+}
+
+.job-container{
+  margin:  20px;
+  height: 80vh;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 0 10rem;
+  height: 100%;
+}
+
+.grid-item-1{
+  width: 100%;
+  height: 100%;
+}
+
+.grid-item-2{
+  width: 100%;
+  height: 100%;
+}
+
+.job-card{
+  width: 90%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px 10px;
+}
+
+.card-scroll{
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.discription-scroll{
+  padding: 20px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.discription-head{
+  width: 100%;
+  padding: 20px ;
+}
+.btn-report{
+  background-color: #E4E2E0;
+  color: black;
+  font-weight: 700;
+  padding: 70px;
+}
+
+.btn-wrapper-jobs{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  
+}
