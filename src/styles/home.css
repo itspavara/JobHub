@@ -91,13 +91,24 @@ body{
   width: 150px;
   height:160px
 }
+
+.hero{
+  width: 100%;
+  height: 60vh;
+  background-image: url("/src/images/background2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
 .search-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 40vh;
-  border-bottom:  1px solid black;
 }
 .search{
   display: flex;
@@ -136,8 +147,6 @@ body{
 }
 
 .body{
-  display: grid;
-  grid-template-columns: auto auto auto;
   align-items: center;
 }
 .job-tag{
@@ -146,11 +155,11 @@ body{
   justify-content: space-around;
   align-items: center;
   padding: 10px;
-  width: 60%;
+  width: 100%;
   margin: 15px;
 }
 
-.grid-item{
+.recent-job{
   width: 700px;
   height: 500px;
   margin: auto;
@@ -208,4 +217,12 @@ body{
   margin-left: 20px;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.btn-seemore{
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px 10px;
+  
 }

@@ -67,3 +67,10 @@
   height: 50px;
   
 }
+
+.search-wrapper-viewjobs{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

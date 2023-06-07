@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/styles/home.css" />
+    <title>Upload job</title>
 
     <!--Fontawsomr icons-->
     <link
@@ -15,9 +15,9 @@
       referrerpolicy="no-referrer"
     />
 
-    <title>JobHub</title>
+    <link rel="stylesheet" href="./src/styles/home.css" />
+    <link rel="stylesheet" href="./src/styles/uploadcv.css" />
   </head>
-
   <header>
     <nav>
       <div class="nav-container">
@@ -30,81 +30,28 @@
           <ul class="nav">
             <li><a href="/viewjob.html">Find Jobs</a></li>
             <li><a href="/uploadcv.html">Upload cv</a></li>
-            <li><a href="">About us</a></li>
+            <li><a href="">About</a></li>
           </ul>
         </div>
-        <div class="btn-wrapper">
-          <button class="btn">Log In</button>
-          <button class="btn">Sign Up</button>
+        <div class="icon">
+          <a href=""><i class="fa-solid fa-user fa-2xl"></i></a>
         </div>
       </div>
     </nav>
   </header>
 
   <body>
-    <div class="hero">
-      <div class="search-wrapper">
-        <div class="search">
-          <label>Search What you Want</label>
-          <div class="search-bar">
-            <input
-              type="text"
-              placeholder="Search Jobs,Keyword,Company,State..."
-              class="search-input"
-            />
-            <select>
-              <option value="0">Full Time</option>
-              <option value="1">Part Time</option>
-            </select>
-            <div class="btn-wrapper-search">
-              <button class="btn btn-search">Search</button>
-            </div>
-          </div>
+    <div class="cv-container">
+      <div class="cv-wrapper">
+        <h1>Add a CV to JobHub</h1>
+        <div class="btn-wrapper">
+          <button class="btn btn-cv" type="submit">Upload CV</button>
         </div>
+        <p>
+          By continuing, you agree to create a public CV and agree to receiving
+          job opportunities from employers.
+        </p>
       </div>
-    </div>
-
-    <div class="body">
-      <div class="recent-job">
-        <h1>Most Recent Jobs</h1>
-        <div class="job-tag">
-          <h3 class="company">WSO2</h3>
-          <h3 class="job">Software engineer</h3>
-          <i class="fa-solid fa-circle-chevron-right fa-lg"></i>
-        </div>
-
-        <div class="job-tag">
-          <h3 class="company">WSO2</h3>
-          <h3 class="job">Software engineer</h3>
-          <i class="fa-solid fa-circle-chevron-right fa-lg"></i>
-        </div>
-
-        <div class="job-tag">
-          <h3 class="company">WSO2</h3>
-          <h3 class="job">Software engineer</h3>
-          <i class="fa-solid fa-circle-chevron-right fa-lg"></i>
-        </div>
-
-        <div class="job-tag">
-          <h3 class="company">WSO2</h3>
-          <h3 class="job">Software engineer</h3>
-          <i class="fa-solid fa-circle-chevron-right fa-lg"></i>
-        </div>
-
-        <a href="/viewjob.html" class="btn btn-seemore">see More</a>
-      </div>
-    </div>
-
-    <div class="dis">
-      <h2>Why us</h2>
-      <p>
-        If you're looking for a job, our online job portal is the perfect place
-        to start your search. We have a wide variety of jobs to choose from, our
-        job search tools are easy to use, and we offer a variety of features to
-        help you stand out from the competition. We are also committed to
-        helping you find a job, so don't hesitate to contact our team of career
-        coaches if you need help with your job search.
-      </p>
     </div>
   </body>
 

@@ -18,6 +18,7 @@
 
     <title>View Jobs</title>
   </head>
+
   <header>
     <nav>
       <div class="nav-container">
@@ -28,9 +29,9 @@
         </div>
         <div>
           <ul class="nav">
-            <li><a href="">Find Jobs</a></li>
-            <li><a href="">Upload cv</a></li>
-            <li><a href="">Post job</a></li>
+            <li><a href="/viewjob.html">Find Jobs</a></li>
+            <li><a href="/uploadcv.html">Upload cv</a></li>
+            <li><a href="">About</a></li>
           </ul>
         </div>
         <div class="icon">
@@ -41,6 +42,25 @@
   </header>
 
   <body>
+    <div class="search-wrapper-viewjobs">
+      <div class="search">
+        <label>Search What you Want</label>
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search Jobs,Keyword,Company,State..."
+            class="search-input"
+          />
+          <select>
+            <option value="0">Full Time</option>
+            <option value="1">Part Time</option>
+          </select>
+          <div class="btn-wrapper-search">
+            <button class="btn btn-search">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="job-container">
       <div class="grid-container">
         <div class="grid-item grid-item-1">
