@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&family=Roboto:wght@100;300;400;500;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -5,72 +7,41 @@
   font-family: "poppins";
 }
 
-.job-container{
-  margin:  20px;
-  height: 80vh;
-}
-.grid-container{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin: 0 10rem;
-  height: 100%;
+.disc-container{
+  width: 60%;
+  margin:auto;
+  margin-top: 50px;
 }
 
-.grid-item-1{
-  width: 100%;
-  height: 100%;
+.disc-head{
+  margin: 20px 0;
+  line-height: 30px;
 }
 
-.grid-item-2{
-  width: 100%;
-  height: 100%;
+.disc{
+  margin:auto;
 }
 
-.job-card{
-  width: 90%;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 20px 10px;
-}
-
-.card-scroll{
-  width: 100%;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-
-.discription-scroll{
-  padding: 20px;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-
-.discription-head{
-  width: 100%;
-  padding: 20px ;
-}
-.btn-report{
-  background-color: #E4E2E0;
-  color: black;
-  font-weight: 700;
-  padding: 70px;
+.btn{
+  padding: 10px 15px;
+  margin: 5px;
+  border: 1px;
+  border-radius: 7px;
+  text-decoration: none;
+  background-color:#64c8fa;
+  color: white;
+  cursor: pointer;
 }
 
 .btn-wrapper-jobs{
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.icon{
-  width: 50px;
-  height: 50px;
-  
-}
-
-.search-wrapper-viewjobs{
-  height: 20vh;
+.btn-wrapper-back{
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: end;
 }
