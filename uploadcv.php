@@ -13,25 +13,8 @@
   <link rel="stylesheet" href="./src/styles/home.css" />
   <link rel="stylesheet" href="./src/styles/uploadcv.css" />
 </head>
-<header>
-  <nav>
-    <div class="nav-container">
-      <div id="logonav">
-        <a href="/JobHub/home.php"><img src="./src/images/logo-no-background.png" alt="Logo" /></a>
-      </div>
-      <div>
-        <ul class="nav">
-          <li><a href="/JobHub/findjob.php">Find Jobs</a></li>
-          <li><a href="/JobHub/uploadcv.php">Upload cv</a></li>
-          <li><a href="">About</a></li>
-        </ul>
-      </div>
-      <div class="icon">
-        <a href=""><i class="fa-solid fa-user fa-2xl"></i></a>
-      </div>
-    </div>
-  </nav>
-</header>
+
+<?php require_once("./header.php") ?>
 
 <body>
   <div class="cv-container">
@@ -48,51 +31,6 @@
   </div>
 </body>
 
-<footer class="foot-container">
-  <div class="foot-dis">
-    <div id="logofoot">
-      <img src="./src/images/logo-no-background.png" alt="Logo" />
-    </div>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-      doloribus adipisci ullam blanditiis
-    </p>
-    <div>
-      <i class="fa-brands fa-facebook-f fa-xl"></i>
-      <i class="fa-brands fa-instagram fa-xl"></i>
-      <i class="fa-brands fa-twitter fa-xl"></i>
-      <i class="fa-brands fa-linkedin fa-xl"></i>
-      <i class="fa-brands fa-youtube fa-xl"></i>
-    </div>
-  </div>
-  <div class="foot-nav">
-    <ul>
-      <li><a href="">About Us</a></li>
-      <li><a href="">Contact us</a></li>
-      <li><a href="">Terms and Cond</a></li>
-      <li><a href="">Privacy Policy</a></li>
-      <li><a href="">Blog</a></li>
-    </ul>
-  </div>
-  <div class="foot-nav">
-    <ul>
-      <li><a href="">For Employes</a></li>
-      <li><a href="">Find Jobs</a></li>
-      <li><a href="">Account</a></li>
-      <li><a href="">Upload Resume</a></li>
-      <li><a href="">Help</a></li>
-    </ul>
-  </div>
-  <div class="foot-nav">
-    <ul>
-      <li><a href="">For Companis</a></li>
-      <li><a href="">Post Jobs</a></li>
-      <li><a href="">Account</a></li>
-      <li><a href="">Pricing</a></li>
-      <li><a href="">Help</a></li>
-    </ul>
-  </div>
-</footer>
+<?php require_once("./footer.php") ?>
 
 </html>

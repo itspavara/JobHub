@@ -16,44 +16,26 @@ require_once("./config/config.php");
   <!--Fontawsomr icons-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <title>View Jobs</title>
+  <title>find Jobs</title>
 </head>
 
-<header>
-  <nav>
-    <div class="nav-container">
-      <div id="logonav">
-        <a href="/JobHub/home.php"><img src="./src/images/logo-no-background.png" alt="Logo" /></a>
-      </div>
-      <div>
-        <ul class="nav">
-          <li><a href="/JobHub/findjob.php">Find Jobs</a></li>
-          <li><a href="/JobHub/uploadcv.php">Upload cv</a></li>
-          <li><a href="">About</a></li>
-        </ul>
-      </div>
-      <div class="icon">
-        <a href=""><i class="fa-solid fa-user fa-2xl"></i></a>
-      </div>
-    </div>
-  </nav>
-</header>
+<?php require_once("./header.php") ?>
 
 <body>
+  <div class="space"></div>
   <div class="search-wrapper-viewjobs">
-    <div class="search">
-      <label>Search What you Want</label>
-
-
+    <div class="search-viewjobs">
+      <h2>Search What you Want</h2>
       <!-- search jobs -->
       <form action="findjob.php" method="get">
-        <div class="search-bar">
-          <input type="text" placeholder="Search Jobs,Keyword,Company,State..." class="search-input" name="search" value="<?php if (isset($_GET['search'])) {
-                                                                                                                            echo $_GET['search'];
-                                                                                                                          } ?>" />
-          <select name="category">
+        <div class="searchbar-viewjobs">
+          <input type="text" placeholder="   Search Jobs,Keyword,Company,State..." class="search-input" name="search" value="<?php if (isset($_GET['search'])) {
+                                                                                                                                echo $_GET['search'];
+                                                                                                                              } ?>" />
+          <select class="category" name="category">
             <option value="full-time">Full Time</option>
             <option value="part-time">Part Time</option>
+            <option value="internship">Internship</option>
           </select>
           <div class="btn-wrapper-search">
             <button class="btn btn-search" type="submit">Search</button>
@@ -104,51 +86,6 @@ require_once("./config/config.php");
   </div>
 </body>
 
-<footer class="foot-container">
-  <div class="foot-dis">
-    <div id="logofoot">
-      <img src="./src/images/logo-no-background.png" alt="Logo" />
-    </div>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-      doloribus adipisci ullam blanditiis
-    </p>
-    <div>
-      <i class="fa-brands fa-facebook-f fa-xl"></i>
-      <i class="fa-brands fa-instagram fa-xl"></i>
-      <i class="fa-brands fa-twitter fa-xl"></i>
-      <i class="fa-brands fa-linkedin fa-xl"></i>
-      <i class="fa-brands fa-youtube fa-xl"></i>
-    </div>
-  </div>
-  <div class="foot-nav">
-    <ul>
-      <li><a href="">About Us</a></li>
-      <li><a href="">Contact us</a></li>
-      <li><a href="">Terms and Cond</a></li>
-      <li><a href="">Privacy Policy</a></li>
-      <li><a href="">Blog</a></li>
-    </ul>
-  </div>
-  <div class="foot-nav">
-    <ul>
-      <li><a href="">For Employes</a></li>
-      <li><a href="">Find Jobs</a></li>
-      <li><a href="">Account</a></li>
-      <li><a href="">Upload Resume</a></li>
-      <li><a href="">Help</a></li>
-    </ul>
-  </div>
-  <div class="foot-nav">
-    <ul>
-      <li><a href="">For Companis</a></li>
-      <li><a href="">Post Jobs</a></li>
-      <li><a href="">Account</a></li>
-      <li><a href="">Pricing</a></li>
-      <li><a href="">Help</a></li>
-    </ul>
-  </div>
-</footer>
+<?php require_once("./footer.php") ?>
 
 </html>

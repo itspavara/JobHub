@@ -1,8 +1,3 @@
-<?php
-//Linking the configuration file
-require_once("./config/config.php");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,49 +13,36 @@ require_once("./config/config.php");
   <title>JobHub</title>
 </head>
 
-<nav class="nav-container">
-  <div id="logonav">
-    <a href="/home.html"><img src="./src/images/logo-no-background.png" alt="Logo" /></a>
-  </div>
-  <div>
-    <ul class="nav">
-      <li><a href="/JobHub/findjob.php">Find Jobs</a></li>
-      <li><a href="/JobHub/uploadcv.php">Upload cv</a></li>
-      <li><a href="">About us</a></li>
-    </ul>
-  </div>
-  <div class="btn-wrapper">
-    <button class="btn">Log In</button>
-    <button class="btn">Sign Up</button>
-  </div>
-</nav>
-<header>
-  <div class="hero">
-    <h1 class="header-title">
-      FIND YOUR <br> <span>PERFECT JOB</span><br>EASILY
-    </h1>
-  </div>
-</header>
+<?php require_once("./header.php") ?>
 
 <body>
-  <!-- search bar -->
-  <form action="findjob.php" method="get">
-    <div class="search-wrapper">
-      <div class="search">
-        <label>Search What you Want</label>
-        <div class="search-bar">
-          <input type="text" placeholder="Search Jobs,Keyword,Company,State..." class="search-input" name="search" />
-          <select name="category">
-            <option value="full-time">Full Time</option>
-            <option value="part-time">Part Time</option>
-          </select>
-          <div class="btn-wrapper-search">
+  <div class="hero">
+    <div>
+      <h1 class="header-title">
+        Easy to looking for job Career with JobHub
+      </h1>
+      <p class="hero-disc"><span>JobHub</span> is job search with a talent passionate all people can connect with several company in the SriLanka.One of advantage to use this website you can
+        <span>easy & quickly </span> to find a match job
+      </p>
+    </div>
+    <!-- search bar -->
+    <form action="findjob.php" method="get">
+      <div class="search-wrapper">
+        <div class="search">
+          <div class="search-bar">
+            <input type="text" placeholder="   Search Jobs,Keyword,Company,State..." class="search-input" name="search" />
+            <select class="category" name="category">
+              <option value="full-time">Full Time</option>
+              <option value="part-time">Part Time</option>
+              <option value="internship">Internship</option>
+            </select>
             <button class="btn btn-search" type="submit">Search</button>
           </div>
+
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 
   <div class="body">
     <div class="recent-job">
@@ -68,7 +50,7 @@ require_once("./config/config.php");
 
       <?php
 
-      $sql = "SELECT company,job_title FROM  job_vacancy LIMIT 4";
+      $sql = "SELECT company,job_title,job_type FROM  job_vacancy LIMIT 4";
       $result = $con->query($sql);
 
       if ($result->num_rows > 0) {
@@ -77,8 +59,9 @@ require_once("./config/config.php");
 
       ?>
           <div class="job-tag">
-            <h3 class="company"><?php echo $row['company'] ?></h3>
-            <h3 class="job"><?php echo $row['job_title'] ?></h3>
+            <h3><?php echo $row['company'] ?></h3>
+            <h3><?php echo $row['job_title'] ?></h3>
+            <h4><?php echo $row['job_type'] ?></h4>
             <a class="viewjob" href="/JobHub/viewjob.php"><i class="fa-solid fa-circle-chevron-right fa-lg"></i></a>
           </div>
       <?php
@@ -90,68 +73,78 @@ require_once("./config/config.php");
 
 
 
-      <a href="/viewjob.html" class="btn btn-seemore">see More</a>
+      <a href="/Jobhub/findjob.php" class="btn btn-seemore">see More</a>
     </div>
   </div>
 
-  <div class="dis">
-    <h2>Why us</h2>
-    <p>
-      If you're looking for a job, our online job portal is the perfect place
-      to start your search. We have a wide variety of jobs to choose from, our
-      job search tools are easy to use, and we offer a variety of features to
-      help you stand out from the competition. We are also committed to
-      helping you find a job, so don't hesitate to contact our team of career
-      coaches if you need help with your job search.
-    </p>
-  </div>
+  <!-- testamonial -->
+  <section class="testamonial">
+
+    <h1>Testamonial</h1>
+
+    <div class="carousel">
+      <div class="carousel-slide">
+        <div class="carousel-item">
+          <h2>Slide 1</h2>
+          <p>Content for slide 1</p>
+        </div>
+        <div class="carousel-item">
+          <h2>Slide 2</h2>
+          <p>Content for slide 2</p>
+        </div>
+        <div class="carousel-item">
+          <h2>Slide 3</h2>
+          <p>Content for slide 3</p>
+        </div>
+        <div class="carousel-item">
+          <h2>Slide 4</h2>
+          <p>Content for slide 4</p>
+        </div>
+        <div class="carousel-item">
+          <h2>Slide 5</h2>
+          <p>Content for slide 5</p>
+        </div>
+        <div class="carousel-item">
+          <h2>Slide 6</h2>
+          <p>Content for slide 6</p>
+        </div>
+      </div>
+      <button class="carousel-prev"><i class="fa-solid fa-arrow-left fa-xl"></i></button>
+      <button class="carousel-next"><i class="fa-solid fa-arrow-right fa-xl"></i></button>
+    </div>
+
+  </section>
+
+
+  <section class="about-box">
+    <div class="about-disc">
+      <h1>About us</h1>
+      <p>If you're looking for a job, our online job portal is the perfect place to start your search. We have a wide variety of jobs to choose from, our job search tools are easy to use, and we offer a variety of features to help you stand out from the competition. We are also committed to helping you find a job, so don't hesitate to contact our team of career coaches if you need help with your job search. </p>
+    </div>
+
+    <div class="grid-container">
+      <div class="vision">
+        <h2>Vision</h2>
+        <p>Our vision for the job portal is to connect job seekers with their ideal career opportunities and empower employers to find the perfect candidates. We aim to be the go-to platform for job search, providing a seamless and user-friendly experience for both job seekers and employers.</p>
+      </div>
+
+      <div class="mission">
+        <h2>Mission</h2>
+        <p>Our mission is to revolutionize the job search process by creating a dynamic and inclusive platform that empowers individuals to find meaningful employment opportunities and supports employers in discovering top talent.</p>
+      </div>
+
+    </div>
+
+    <div class="team">
+      <h1>Team</h1>
+
+      <img src="" alt="">
+    </div>
+  </section>
+
+  <script src="/JobHub/src/js/home.js"></script>
 </body>
 
-<footer class="foot-container">
-  <div class="foot-dis">
-    <div id="logofoot">
-      <img src="./src/images/logo-no-background.png" alt="Logo" />
-    </div>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-      doloribus adipisci ullam blanditiis
-    </p>
-    <div>
-      <i class="fa-brands fa-facebook-f fa-xl"></i>
-      <i class="fa-brands fa-instagram fa-xl"></i>
-      <i class="fa-brands fa-twitter fa-xl"></i>
-      <i class="fa-brands fa-linkedin fa-xl"></i>
-      <i class="fa-brands fa-youtube fa-xl"></i>
-    </div>
-  </div>
-  <div class="foot-nav">
-    <ul>
-      <li><a href="">About Us</a></li>
-      <li><a href="">Contact us</a></li>
-      <li><a href="">Terms and Cond</a></li>
-      <li><a href="">Privacy Policy</a></li>
-      <li><a href="">Blog</a></li>
-    </ul>
-  </div>
-  <div class="foot-nav">
-    <ul>
-      <li><a href="">For Employes</a></li>
-      <li><a href="">Find Jobs</a></li>
-      <li><a href="">Account</a></li>
-      <li><a href="">Upload Resume</a></li>
-      <li><a href="">Help</a></li>
-    </ul>
-  </div>
-  <div class="foot-nav">
-    <ul>
-      <li><a href="">For Companis</a></li>
-      <li><a href="">Post Jobs</a></li>
-      <li><a href="">Account</a></li>
-      <li><a href="">Pricing</a></li>
-      <li><a href="">Help</a></li>
-    </ul>
-  </div>
-</footer>
+<?php require_once("./footer.php") ?>
 
 </html>

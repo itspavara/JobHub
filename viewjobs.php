@@ -15,13 +15,16 @@ require_once("./config/config.php");
   <title>View Jobs</title>
 
   <link rel="stylesheet" href="./src/styles/viewjobs.css">
+  <link rel="stylesheet" href="./src/styles/home.css">
 </head>
+<?php require_once("./header.php") ?>
 
 <body>
   <?php
 
   $id = $_GET['id'];
-  $sql = "SELECT * FROM job_vacancy WHERE job_id = '$id'";
+  $save = $_GET['save'];
+  $sql = "SELECT * FROM job_vacancy WHERE job_id = '$id' OR job_id ='$save' ";
 
   $result = $con->query($sql);
 
@@ -32,10 +35,11 @@ require_once("./config/config.php");
 
 
   ?>
-
+      <div class="space"></div>
       <div class="disc-container">
         <div class="btn-wrapper-back">
-          <a class="btn btn-back" href="/JobHub/findjob.php"> Back</a>
+          <!-- <a class="btn btn-back" href="/JobHub/findjob.php"> Back</a> -->
+          <button class="btn btn-back" onclick="goBack()"> Back</button>
         </div>
         <div class="disc-head">
           <h2><?php echo $row['job_title']; ?></h2>
@@ -47,19 +51,32 @@ require_once("./config/config.php");
             <?php echo $row['job_description']; ?>
           </div>
           <div class="btn-wrapper-jobs">
-            <button class="btn btn-save">Save Job</button>
-            <button class="btn btn-report">report job</button>
+
+            <form action="viewjobs.php" method="get">
+              <div class="btn-wrapper-jobs">
+                <button name="save" value="<?= $row['job_id'] ?>" class="btn btn-searchd">Save job</button>
+                <button name="apply" value="<?= $row['job_id'] ?>" class="btn btn-searchd">Apply job</button>
+                <button name="report" value="<?= $row['job_id'] ?>" class="btn btn-searchd">Report job</button>
+              </div>
+            </form>
           </div>
-        </div>
-    <?php
-    }
-  }
-    ?>
+          <?php
+          if (isset($_GET['save'])) {
+          ?>
+            <div class="alert">
+              <p>Job saved succesfully!</p>
+            </div>
 
-
-
-
-      </div>
+      <?php
+          }
+        }
+      }
+      ?>
+      <script>
+        function goBack() {
+          window.history.back();
+        }
+      </script>
 </body>
 
 </html>

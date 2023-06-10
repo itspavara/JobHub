@@ -45,3 +45,11 @@
   align-items: center;
   justify-content: end;
 }
+
+.alert{
+  width: 70%;
+  background-color: #FFF3CD;
+  color: #856404;
+  border-radius: 5px;
+  padding: 20px;
+}
