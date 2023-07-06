@@ -34,10 +34,15 @@
 }
 
 .btn-wrapper-jobs{
-  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
+  
+}
+
+.btn-search{
+  margin: 0;
 }
 
 .btn-wrapper-back{

@@ -11,7 +11,7 @@ function showItems(startIndex) {
   for (let i = startIndex; i < startIndex + 3; i++) {
     items[i].classList.add('active');
   }
-  carouselSlide.style.transform = `translateX(${-itemWidth * startIndex}px)`;
+  carouselSlide.style.transform = `translateX(${-itemWidth * startIndex}px) `;
 }
 
 prevButton.addEventListener('click', () => {

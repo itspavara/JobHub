@@ -1,6 +1,5 @@
 <?php
 
-// use LDAP\Result;
 
 require_once("./config/config.php");
 ?>
@@ -23,8 +22,8 @@ require_once("./config/config.php");
   <?php
 
   $id = $_GET['id'];
-  $save = $_GET['save'];
-  $sql = "SELECT * FROM job_vacancy WHERE job_id = '$id' OR job_id ='$save' ";
+
+  $sql = "SELECT * FROM job_vacancy WHERE job_id = '$id'";
 
   $result = $con->query($sql);
 
@@ -44,7 +43,9 @@ require_once("./config/config.php");
         <div class="disc-head">
           <h2><?php echo $row['job_title']; ?></h2>
           <h3><?php echo $row['company']; ?></h3>
-          <h3><?php echo $row['job_location']; ?></h3>
+          <h3><?php echo $row['job_location']; ?></h3><br>
+          <h3><?php echo $row['job_type']; ?></h3><br>
+
         </div>
         <div class="disc-body">
           <div class="disc">
@@ -54,29 +55,78 @@ require_once("./config/config.php");
 
             <form action="viewjobs.php" method="get">
               <div class="btn-wrapper-jobs">
-                <button name="save" value="<?= $row['job_id'] ?>" class="btn btn-searchd">Save job</button>
-                <button name="apply" value="<?= $row['job_id'] ?>" class="btn btn-searchd">Apply job</button>
-                <button name="report" value="<?= $row['job_id'] ?>" class="btn btn-searchd">Report job</button>
+                <button name="save" value="<?= $row['job_id'] ?>" class="btn btn-search">Save job</button>
+                <button name="apply" value="<?= $row['job_id'] ?>" class="btn btn-search">Apply job</button>
               </div>
             </form>
           </div>
-          <?php
-          if (isset($_GET['save'])) {
-          ?>
-            <div class="alert">
-              <p>Job saved succesfully!</p>
-            </div>
 
       <?php
-          }
+
+    }
+  }
+      ?>
+
+      <!-- save jobs -->
+      <?php
+      if (isset($_GET['save'])) {
+
+
+        $job_id = $_GET['save'];
+        $user_id = $_SESSION['User_ID'];
+
+        $sql_save = "INSERT INTO save_job (job_id,user_id,saved_date) VALUES ('$job_id','$user_id',NOW())";
+        $result = $con->query($sql_save);
+
+        if ($result) {
+          $message = "Save job successfully";
+          goBack();
+          echo "<script>
+              alert('$message');
+            </script>";
+        } else {
+          echo mysqli_error($con);
         }
       }
+
       ?>
+
+      <!-- apply jobs -->
+      <?php
+      if (isset($_GET['apply'])) {
+
+        $job_id = $_GET['apply'];
+        $user_id = $_SESSION['User_ID'];
+
+        $sql_apply = "INSERT INTO applied_job (job_id,user_id,app_date) VALUES ('$job_id','$user_id',NOW())";
+        $result = $con->query($sql_apply);
+
+        if ($result) {
+          $message = "Apply job successfully";
+          goBack();
+          echo "<script>
+              alert('$message');
+            </script>";
+        }
+      }
+
+      ?>
+
+      <?php
+      function goBack()
+      {
+        echo "<script>
+            window.history.back();
+          </script>";
+      }
+      ?>
+
       <script>
         function goBack() {
           window.history.back();
         }
       </script>
+
 </body>
 
 </html>

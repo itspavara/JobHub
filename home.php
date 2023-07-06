@@ -31,6 +31,7 @@
         <div class="search">
           <div class="search-bar">
             <input type="text" placeholder="   Search Jobs,Keyword,Company,State..." class="search-input" name="search" />
+
             <select class="category" name="category">
               <option value="full-time">Full Time</option>
               <option value="part-time">Part Time</option>
@@ -50,7 +51,7 @@
 
       <?php
 
-      $sql = "SELECT company,job_title,job_type FROM  job_vacancy LIMIT 4";
+      $sql = "SELECT * FROM  job_vacancy LIMIT 4";
       $result = $con->query($sql);
 
       if ($result->num_rows > 0) {
@@ -58,12 +59,15 @@
         while ($row = $result->fetch_assoc()) {
 
       ?>
-          <div class="job-tag">
-            <h3><?php echo $row['company'] ?></h3>
-            <h3><?php echo $row['job_title'] ?></h3>
-            <h4><?php echo $row['job_type'] ?></h4>
-            <a class="viewjob" href="/JobHub/viewjob.php"><i class="fa-solid fa-circle-chevron-right fa-lg"></i></a>
-          </div>
+          <form action="viewjobs.php" method="get">
+
+            <div class="job-tag">
+              <h3><?php echo $row['company'] ?></h3>
+              <h3><?php echo $row['job_title'] ?></h3>
+              <h4><?php echo $row['job_type'] ?></h4>
+              <a class="viewjob" href="viewjobs.php?id=<?= $row['job_id'] ?>"><i class="fa-solid fa-circle-chevron-right fa-lg"></i></a>
+            </div>
+          </form>
       <?php
         }
       } else {
@@ -85,28 +89,28 @@
     <div class="carousel">
       <div class="carousel-slide">
         <div class="carousel-item">
-          <h2>Slide 1</h2>
-          <p>Content for slide 1</p>
+          <p>"This job portal transformed my career. Within a week, I landed a perfect job that matched my skills and goals. Highly recommended!"</p>
+          <h2>Senadi Dilhara</h2>
         </div>
         <div class="carousel-item">
-          <h2>Slide 2</h2>
-          <p>Content for slide 2</p>
+          <p>"Thanks to this job portal, I found my dream job quickly and effortlessly. It streamlined the entire process, and I'm now employed in a role I truly enjoy."</p>
+          <h2>Supipi Rangani</h2>
         </div>
         <div class="carousel-item">
-          <h2>Slide 3</h2>
-          <p>Content for slide 3</p>
+          <p>"The resources and support from this job portal helped me secure a higher-paying job with better growth prospects. Highly satisfied with the results!"</p>
+          <h2> Davinda Jayathilaka</h2>
         </div>
         <div class="carousel-item">
-          <h2>Slide 4</h2>
-          <p>Content for slide 4</p>
+          <p>"I restarted my career successfully with this job portal. The resume builder and career advice section were invaluable. I landed a job offer that exceeded my expectations." </p>
+          <h2>Mahesh Thikshana</h2>
         </div>
         <div class="carousel-item">
-          <h2>Slide 5</h2>
-          <p>Content for slide 5</p>
+          <p>"This job portal was a game-changer for my freelance career. I found regular gigs and built a strong portfolio, thanks to its reliable platform."</p>
+          <h2>Kapila Gunawardana</h2>
         </div>
         <div class="carousel-item">
-          <h2>Slide 6</h2>
-          <p>Content for slide 6</p>
+          <p>"After relocating, I needed a job quickly. This job portal helped me find opportunities in my area. Now happily employed, thanks to their support and resources."</p>
+          <h2>Vishwa Perera</h2>
         </div>
       </div>
       <button class="carousel-prev"><i class="fa-solid fa-arrow-left fa-xl"></i></button>
@@ -116,31 +120,6 @@
   </section>
 
 
-  <section class="about-box">
-    <div class="about-disc">
-      <h1>About us</h1>
-      <p>If you're looking for a job, our online job portal is the perfect place to start your search. We have a wide variety of jobs to choose from, our job search tools are easy to use, and we offer a variety of features to help you stand out from the competition. We are also committed to helping you find a job, so don't hesitate to contact our team of career coaches if you need help with your job search. </p>
-    </div>
-
-    <div class="grid-container">
-      <div class="vision">
-        <h2>Vision</h2>
-        <p>Our vision for the job portal is to connect job seekers with their ideal career opportunities and empower employers to find the perfect candidates. We aim to be the go-to platform for job search, providing a seamless and user-friendly experience for both job seekers and employers.</p>
-      </div>
-
-      <div class="mission">
-        <h2>Mission</h2>
-        <p>Our mission is to revolutionize the job search process by creating a dynamic and inclusive platform that empowers individuals to find meaningful employment opportunities and supports employers in discovering top talent.</p>
-      </div>
-
-    </div>
-
-    <div class="team">
-      <h1>Team</h1>
-
-      <img src="" alt="">
-    </div>
-  </section>
 
   <script src="/JobHub/src/js/home.js"></script>
 </body>

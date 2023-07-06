@@ -14,29 +14,21 @@ require_once("./config/config.php");
 
           <?php
           //Show user dashboard link once logged in.
-          if (isset($_SESSION['id_user']) && empty($_SESSION['companyLogged'])) {
+          if (isset($_SESSION['User_ID'])) {
           ?>
             <li><a href="/JobHub/findjob.php">Find Jobs</a></li>
             <li><a href="/JobHub/uploadcv.php">Upload cv</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="user/dashboard.php">Dashboard</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li><a href="/JobHub/about_us.php">About</a></li>
+            <li><a href="/JobHub/dashboard.php">Dashboard</a></li>
+            <li><a href="sign_out.php">Logout</a></li>
           <?php
-          } else if (isset($_SESSION['id_user']) && isset($_SESSION['companyLogged'])) {
+          } else {
           ?>
             <li><a href="/JobHub/findjob.php">Find Jobs</a></li>
             <li><a href="/JobHub/uploadcv.php">Upload cv</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="company/dashboard.php">Dashboard</a></li>
-            <li><a href="logout.php">Logout</a></li>
-          <?php } else {
-            //Show Login Links if no one is logged in.
-          ?>
-            <li><a href="/JobHub/findjob.php">Find Jobs</a></li>
-            <li><a href="/JobHub/uploadcv.php">Upload cv</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Sign up</a></li>
-            <li><a href="login.php">Login</a></li>
+            <li><a href="/JobHub/about_us.php">About</a></li>
+            <li><a href="/JobHub/sign_up.php">Sign up</a></li>
+            <li><a href="/JobHub/sign_up.php">Login</a></li>
           <?php } ?>
         </ul>
       </div>

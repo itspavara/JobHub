@@ -17,11 +17,12 @@
 <?php require_once("./header.php") ?>
 
 <body>
+  <div class="space"></div>
   <div class="cv-container">
     <div class="cv-wrapper">
       <h1>Add a CV to JobHub</h1>
       <div class="btn-wrapper">
-        <button class="btn btn-cv" type="submit">Upload CV</button>
+        <a href="/JobHub/dashboard.php" class="btn btn-cv">Upload CV</a>
       </div>
       <p>
         By continuing, you agree to create a public CV and agree to receiving
