@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: "poppins";
+}
+
+.job-container{
+  margin:  20px;
+  height: 80vh;
+}
+
+.job-card{
+  width: 70%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.job-card-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-scroll{
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.discription-scroll{
+  padding: 20px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.discription-head{
+  width: 100%;
+  padding: 20px ;
+}
+.btn-report{
+  background-color: #E4E2E0;
+  color: black;
+  font-weight: 700;
+  padding: 70px;
+}
+
+.btn-wrapper-jobs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  
+}
+
+.search-wrapper-viewjobs{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search-viewjobs{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 50%;
+}
+.searchbar-viewjobs{
+  display: flex;
+  width: 100%;
+}
+.search-input{
+  width: 500px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: none;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.category{
+  background-color: white;
+  border-left: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+

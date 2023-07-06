@@ -1,0 +1,55 @@
+.foot-dis{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .foot-dis p{
+    text-align: center;
+  }
+  
+  .foot-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+  }
+  .foot-container div p{
+    width: 300px;
+  }
+  
+  .foot-container div{
+    margin: 20px 30px;
+  }
+  
+  .foot-nav li {
+    text-decoration:none;
+    list-style: none;
+    margin: 5px;
+    color: white;
+    line-height: 2.5rem;
+  }
+  
+  .foot-nav a{
+    text-decoration:none;
+    list-style: none;
+    margin: 5px;
+    color: white;
+    line-height: 2.5rem;
+  }
+  
+  
+  .fa-brands{
+    margin: 10px;
+  }
+  #logonav a > img{
+    width: 100px;
+    height: 100px;
+  }
+  
+  #logofoot img{
+    width: 150px;
+    height:160px
+  }
+  
